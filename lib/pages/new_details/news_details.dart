@@ -16,7 +16,7 @@ class NewsDetailsPage extends StatefulWidget {
 class _NewsDetailsPageState extends State<NewsDetailsPage> {
   final NewsController newsController = Get.put(NewsController());
   final TextEditingController _commentController = TextEditingController();
-  List<Comment> comments = []; // Store the list of comments
+  List<Comment> comments = [];
 
   // Function to add a new comment
   void _addComment() {
@@ -24,7 +24,7 @@ class _NewsDetailsPageState extends State<NewsDetailsPage> {
       setState(() {
         String commentId = DateTime.now().millisecondsSinceEpoch.toString();
         comments.add(Comment(username: 'Anonymous', content: _commentController.text, id: commentId));
-        _commentController.clear(); // Clear the text field after adding comment
+        _commentController.clear();
       });
     }
   }

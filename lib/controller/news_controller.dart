@@ -37,7 +37,7 @@ class NewsController extends GetxController {
   Future<void> getTrendingNews() async {
     isTrendingLoading.value = true;
     var baseURL =
-        "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=914ea81f3e6d40608483113e541a8d96";
+        "https://newsapi.org/v2/everything?domains=wsj.com&apiKey=fdb8102dbb88434dab14958376ecaa22";
     try {
       var response = await http.get(Uri.parse(baseURL));
       print(response);
@@ -60,7 +60,7 @@ class NewsController extends GetxController {
   Future<void> getNewsForYou() async {
     isNewsForULoading.value = true;
     var baseURL =
-        "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=914ea81f3e6d40608483113e541a8d96";
+        "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=fdb8102dbb88434dab14958376ecaa22";
     try {
       var response = await http.get(Uri.parse(baseURL));
       print(response);
@@ -84,7 +84,7 @@ class NewsController extends GetxController {
   Future<void> getBusinessNews() async {
     isBuisLoading.value = true;
     var baseURL =
-        "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=914ea81f3e6d40608483113e541a8d96";
+        "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=fdb8102dbb88434dab14958376ecaa22";
     try {
       var response = await http.get(Uri.parse(baseURL));
       print(response);
@@ -108,7 +108,7 @@ class NewsController extends GetxController {
   Future<void> getAppleNews() async {
     isAppleLoading.value = true;
     var baseURL =
-        "https://newsapi.org/v2/everything?q=apple&from=2024-12-01&to=2024-12-01&sortBy=popularity&apiKey=914ea81f3e6d40608483113e541a8d96";
+        "ttps://newsapi.org/v2/everything?q=apple&from=2024-12-07&to=2024-12-07&sortBy=popularity&apiKey=fdb8102dbb88434dab14958376ecaa22";
     try {
       var response = await http.get(Uri.parse(baseURL));
       print(response);
@@ -132,7 +132,7 @@ class NewsController extends GetxController {
   Future<void> getTeslaNews() async {
     isTeslaLoading.value = true;
     var baseURL =
-        "https://newsapi.org/v2/everything?q=tesla&from=2024-11-02&sortBy=publishedAt&apiKey=914ea81f3e6d40608483113e541a8d96";
+        "https://newsapi.org/v2/everything?q=tesla&from=2024-11-08&sortBy=publishedAt&apiKey=fdb8102dbb88434dab14958376ecaa22";
     try {
       var response = await http.get(Uri.parse(baseURL));
       print(response);
@@ -157,7 +157,7 @@ class NewsController extends GetxController {
   Future<void> searchNews(String search) async {
     isNewsForULoading.value = true;
     var baseURL =
-        "https://newsapi.org/v2/everything?q=$search&apiKey=914ea81f3e6d40608483113e541a8d96";
+        "https://newsapi.org/v2/everything?q=$search&apiKey=fdb8102dbb88434dab14958376ecaa22";
     try {
       var response = await http.get(Uri.parse(baseURL));
       print(response);
