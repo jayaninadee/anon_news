@@ -1,29 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:anon_news/controller/feedback_controller.dart';
 
 class AboutPage extends StatelessWidget {
   const AboutPage({super.key});
 
-//  TextEditingController _feedbackController = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       appBar: AppBar(
-        title: const Text('About Us'),
+        title: const Text('Settings'),
         backgroundColor: Colors.blueAccent,
-        leading: InkWell(
-          onTap: () {
-            Get.back();
-          },
-          child: const Padding(
-            padding: EdgeInsets.all(8.0), // Adjust padding
-            child: Icon(Icons.arrow_back),
-          ),
-        ),
       ),
-
       body: ListView(
         padding: const EdgeInsets.all(16.0),
         children: [
@@ -53,7 +41,7 @@ class AboutPage extends StatelessWidget {
     );
   }
 
-  // Function to show About Dialog
+// Function to show About Dialog
   void _showAboutDialog(BuildContext context) {
     showDialog(
       context: context,
@@ -79,7 +67,7 @@ class AboutPage extends StatelessWidget {
     );
   }
 
-  // Function to show Feedback Form Dialog
+// Function to show Feedback Form Dialog
   void _showFeedbackDialog(BuildContext context) {
     showDialog(
       context: context,
@@ -129,7 +117,7 @@ class AboutPage extends StatelessWidget {
     );
   }
 
-  //  send feedback
+//  send feedback
   Future<void> _sendFeedback(String feedback) async {
     final Uri emailLaunchUri = Uri(
       scheme: 'mailto',

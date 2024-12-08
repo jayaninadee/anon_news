@@ -3,12 +3,15 @@ import 'package:get/get.dart';
 import 'package:anon_news/controller/news_controller.dart';
 import 'package:anon_news/pages/artical_page/widgets/search_widget.dart';
 import 'package:anon_news/pages/new_details/news_details.dart';
+import 'package:anon_news/db/db_helper.dart';
+import 'package:anon_news/model/comment_model.dart';
 
 import 'package:anon_news/pages/home_page/widgets/news_tile.dart';
 
 
-class ArticalPage extends StatelessWidget {
-  const ArticalPage({super.key});
+class ArticlePage extends StatelessWidget {
+  const ArticlePage({super.key});
+
 
   @override
   Widget build(BuildContext context) {
