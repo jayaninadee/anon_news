@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:anon_news/components/navigation_bar.dart';
-
 import 'package:anon_news/controller/bottom_navigation_controller.dart';
 
 class HomePageController extends StatelessWidget {

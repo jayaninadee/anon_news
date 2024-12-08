@@ -6,6 +6,7 @@ import 'package:anon_news/controller/news_controller.dart';
 import 'package:anon_news/pages/home_page/widgets/news_tile.dart';
 import 'package:anon_news/pages/home_page/widgets/trending_card.dart';
 import 'package:anon_news/pages/new_details/news_details.dart';
+import 'package:anon_news/pages/profile/profile_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -42,7 +43,9 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(() => const ProfilePage());
+                    },
                     child: Container(
                       width: 50,
                       height: 50,

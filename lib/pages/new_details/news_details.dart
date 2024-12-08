@@ -5,6 +5,7 @@ import 'package:anon_news/model/news_model.dart';
 import 'package:anon_news/controller/news_controller.dart';
 
 
+
 class NewsDetailsPage extends StatelessWidget {
   final NewsModel news;
   const NewsDetailsPage({super.key, required this.news});
